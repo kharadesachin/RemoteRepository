@@ -1,0 +1,94 @@
+{% include 'cdnlines.html' %}
+
+<style>
+    .cls1{
+        border: 3px darkred solid;
+        padding: 25px;
+        border-radius: 25px;
+        box-shadow: 10px 10px 10px hotpink;
+        text-shadow: 1px 1px 1px greenyellow;
+        color: deeppink;
+    }
+
+</style>
+<div class="container">
+    <div class="row">
+        <div class="offset-md-3 col-md-6 mt-3">
+            <h4><u>Fill These Form To Add New Student...</u></h4>
+            <form method="post" action="{% url 'stud_updated' student.id %}" class="cls1">
+                {% csrf_token %}
+                <div class="row">
+                    <div class="col-md-6">
+                        <label>First Name :</label>
+                        <input type="text" value="{{ student.first_name }}" name="fname" class="form-control" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label>Last Name :</label>
+                        <input type="text" value="{{ student.last_name }}" name="lname" class="form-control" required>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <label>Section Name :</label>
+                        <input type="text" value="{{ student.section_name }}" name="section" class="form-control" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label>Class Name :</label>
+                        <input type="text" value="{{ student.class_name }}" name="class" class="form-control" required>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <label>School Name :</label>
+                        <input type="text" value="{{ student.school_name }}" name="school" class="form-control" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label>Mobile No :</label>
+                        <input type="text" value="{{ student.mobile }}" name="mobile" class="form-control" required>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <label>Marathi Marks :</label>
+                        <input type="text" value="{{ student.marathi_marks }}" name="marathi" class="form-control" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label>English Marks :</label>
+                        <input type="text" value="{{ student.english_marks }}" name="english" class="form-control" required>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <label>Hindi Marks :</label>
+                        <input type="text" value="{{ student.hindi_marks }}" name="hindi" class="form-control" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label>Maths Marks :</label>
+                        <input type="text" value="{{ student.maths_marks }}" name="maths" class="form-control" required>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <label>Science Marks :</label>
+                        <input type="text" value="{{ student.science_marks }}" name="science" class="form-control" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label>Social Marks :</label>
+                        <input type="text" value="{{ student.social_marks }}" name="social" class="form-control" required>
+                    </div>
+                </div>
+                    <br>
+
+                    <center>
+                        <input type="submit" value="Update" class="btn btn-success text-white">
+                        <a href="{% url 'home' %}" class="btn btn-danger text-white">Cancel</a>
+
+                    </center>
+
+
+            </form>
+        </div>
+    </div>
+</div>
+
+<br><br>

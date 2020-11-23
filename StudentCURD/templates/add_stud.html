@@ -1,0 +1,93 @@
+{% include 'cdnlines.html' %}
+
+<style>
+    .cls1{
+        border: 3px darkred solid;
+        padding: 25px;
+        border-radius: 25px;
+        box-shadow: 10px 10px 10px hotpink;
+        text-shadow: 1px 1px 1px greenyellow;
+        color: deeppink;
+    }
+
+</style>
+<div class="container">
+    <div class="row">
+        <div class="offset-md-3 col-md-6 mt-3">
+            <h4><u>Fill These Form To Add New Student...</u></h4>
+            <form action="{% url 'stud_added' %} " method="post" class="cls1">
+                {% csrf_token %}
+                <div class="row">
+                    <div class="col-md-6">
+                        <label>First Name :</label>
+                        <input type="text" name="fname" class="form-control" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label>Last Name :</label>
+                        <input type="text" name="lname" class="form-control" required>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <label>Section Name :</label>
+                        <input type="text" name="section" class="form-control" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label>Class Name :</label>
+                        <input type="text" name="class" class="form-control" required>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <label>School Name :</label>
+                        <input type="text" name="school" class="form-control" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label>Mobile No :</label>
+                        <input type="text" name="mobile" class="form-control" required>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <label>Marathi Marks :</label>
+                        <input type="text" name="marathi" class="form-control" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label>English Marks :</label>
+                        <input type="text" name="english" class="form-control" required>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <label>Hindi Marks :</label>
+                        <input type="text" name="hindi" class="form-control" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label>Maths Marks :</label>
+                        <input type="text" name="maths" class="form-control" required>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <label>Science Marks :</label>
+                        <input type="text" name="science" class="form-control" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label>Social Marks :</label>
+                        <input type="text" name="social" class="form-control" required>
+                    </div>
+                </div>
+                    <br>
+
+                    <center>
+                        <input type="submit" value="Save" class="btn btn-success text-white">
+                        <input type="reset" value="Clear" class="btn btn-danger text-white">
+                    </center>
+
+
+            </form>
+        </div>
+    </div>
+</div>
+
+<br><br>
